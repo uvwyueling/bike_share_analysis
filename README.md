@@ -28,9 +28,7 @@ install.packages("geohashTools")
 
 **3. Python：** <br>
 本项目的数据可视化部分基于 Python 版本 3.13 控制台中运行以下脚本安装所需的软件包：
-import pandas as pd
-import folium
-from branca.colormap import LinearColormap
+pip install pandas folium branca
 
 ## 4.工程结构 (Folder Structure) 
 ```
