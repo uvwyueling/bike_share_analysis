@@ -1,0 +1,14 @@
+# Ignore data files
+data/
+*.csv
+*.xlsx
+
+
+# Ignore OS generated files
+.DS_Store
+
+
+# Ignore credenticals
+.env
+
+
