@@ -1,5 +1,5 @@
 
--- 1. 提取 19.8% 占比的漏斗查询
+-- 1. 提取“工作日通勤特征占休闲行程比例”的漏斗查询
 
 SELECT  
     COUNT(*) AS casual_commute_trips
