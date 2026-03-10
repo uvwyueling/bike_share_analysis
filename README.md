@@ -15,8 +15,7 @@ BigQuery (SQL), R (ggplot2, geohashTools), Python(pandas, folium)
 #### 如何克隆仓库及安装依赖:
 **1. 克隆仓库：** <br>
 打开终端（Terminal），运行以下命令将本项目下载到本地：
-git clone https://github.com
-cd bike_share_analysis
+git clone https://github.com/uvwyueling/bike_share_analysis
 
 **2. R：** <br>
 本项目的数据分析与可视化部分基于 R 版本2026.01.1+403 请在 R 控制台中运行以下脚本安装所需的软件包：

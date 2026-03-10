@@ -13,4 +13,4 @@ WHERE
     NOT (rideable_type = 'classic_bike' AND end_station_name IS NULL)       -- 4. 过滤掉 (rideable_type 是 classic_bike 且 end_station_name 为空) 的行，以剔除异常座标
     AND TIMESTAMP_DIFF(ended_at, started_at, SECOND) BETWEEN 61 AND 86400   -- 5. 只选取行程时长大于60秒同时小于24小时的行程数据
                                                                                -- 行程时长小于60秒的行程是物理异常、与业务无效的错误启动
-                                                                               -- 行程时长超过24小end超lng
+                                                                               -- 行程时长超过24小时的行程属于异常事件

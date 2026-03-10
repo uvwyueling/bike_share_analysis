@@ -3,11 +3,13 @@
 
 SELECT  
     COUNT(*) AS casual_commute_trips
-FROM `bike_sharing.casual_user_weekday`
+FROM `bike_sharing.clean_trip_data`
 WHERE 
-    ride_length_seconds <= 1200                             -- 限定骑行时长在20分钟以内的行程
+    day_of_week NOT IN ('Saturday','Sunday')                    -- 限定工作日骑行
+    AND member_casual = 'casual'                                -- 限定休闲用户
+    AND ride_length_seconds <= 1200                             -- 限定骑行时长在20分钟以内的行程
     AND (
-      (EXTRACT(HOUR FROM started_at) BETWEEN 7 AND 8)       -- 限定骑行始于上午7-8点或下午4-5点的行程（早高峰与晚高峰）
+      (EXTRACT(HOUR FROM started_at) BETWEEN 7 AND 8)           -- 限定骑行始于上午7-8点或下午4-5点的行程（早高峰与晚高峰）
       OR
       (EXTRACT(HOUR FROM started_at) BETWEEN 16 AND 17)
     )
