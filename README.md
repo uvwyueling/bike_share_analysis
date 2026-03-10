@@ -27,7 +27,8 @@ install.packages(c("tidyverse", "lubridate", "ggplot2", "dplyr", "scales"))
 install.packages("geohashTools")
 
 **3. Python：** <br>
-本项目的数据可视化部分基于 Python 版本 3.13 控制台中运行以下脚本安装所需的软件包：
+本项目可视化模块依赖 Python 3.13，使用了 folium 绘制芝加哥市中心网格地图。
+控制台中运行以下脚本安装所需的软件包：
 pip install pandas folium branca
 
 ## 4.工程结构 (Folder Structure) 
